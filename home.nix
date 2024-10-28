@@ -11,6 +11,7 @@
     neofetch
     firefox
     vscodium
+    asciiquarium
   ];
 
 
