@@ -73,6 +73,7 @@
   #  wget
     git
     just
+    brightnessctl
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
