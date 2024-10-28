@@ -2,7 +2,7 @@
   security.sudo = {
     enable = true;
     extraConfig = ''
-      Defaults timestamp_timeout = 30 # in minutes
+      Defaults timestamp_timeout=60 # in minutes
     '';
   };
 }
