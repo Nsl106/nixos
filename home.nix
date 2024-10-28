@@ -12,6 +12,7 @@
     firefox
     vscodium
     asciiquarium
+    rofi-wayland
   ];
 
 
