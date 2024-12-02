@@ -1,11 +1,10 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, inputs, ... }: {
   imports = [
     ./home
   ];
 
   home.username = "nolan";
   home.homeDirectory = "/home/nolan";
-  
 
   home.packages = with pkgs; [
     neofetch
@@ -13,8 +12,12 @@
     vscodium
     asciiquarium
     rofi-wayland
+    jetbrains.idea-ultimate
+    nodejs
+    obsidian
+    pandoc
+    nerd-fonts.jetbrains-mono
   ];
-
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

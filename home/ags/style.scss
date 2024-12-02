@@ -1,0 +1,76 @@
+@use "sass:color";
+
+$fg: #eaeaea;
+$bg: #191919;
+$accent: #378DF7;
+$module-fg: #f5e0dc;
+$radius: 7px;
+
+window.Bar {
+    box-shadow: none;
+    background-color: $bg;
+    color: $fg;
+    font-size: 1em;
+    font-family: "JetBrains Mono", monospace;
+
+    /* Powerline */
+    .powerline {
+        font-size: 12.5pt;
+        //border-radius: 10px;
+    }
+
+    .powerline.right {
+        text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
+        padding-right: 3px;
+    }
+    .powerline.left {
+        //text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
+        //padding-left: 3px;
+    }
+
+    .powerline.inverse {
+        padding: 0;
+        text-shadow: none;
+        //font-size: 13pt;
+        //margin-bottom: -0.1px;
+    }
+
+    /* All Widgets */
+    .widget {
+        opacity: 1;
+        color: $module-fg;
+        margin-bottom: 0;
+        padding: 0 4px;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Icon */
+    #Icon .powerline {
+        color: #9ece6a;
+    }
+
+    #Icon .widget {
+        //margin: 2px 4px 2px 0;
+        padding-right: 6px;
+        padding-left: 9px;
+    }
+
+    /* Battery */
+    #Battery .widget {
+        background-color: #9ece6a;
+    }
+
+    #Battery .powerline {
+        color: #9ece6a;
+        background: #7aa2f7;
+    }
+
+    /* Time */
+    #Clock .widget {
+        background-color: #7aa2f7;
+    }
+
+    #Clock .powerline {
+        color: #7aa2f7;
+    }
+}

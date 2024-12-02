@@ -1,6 +1,6 @@
 {
   programs.cava = {
-    enable = true;
+    enable = false;
     settings = {
       color = {
         background = "default";
