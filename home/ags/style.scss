@@ -1,22 +1,44 @@
 @use "sass:color";
 
-$fg: #eaeaea;
-$bg: #191919;
-$accent: #378DF7;
+$main-fg: #cdd6f4;
+$main-bg: #11111b;
+$main-br: #cdd6f4;
+
 $module-fg: #f5e0dc;
-$radius: 7px;
+
+$accent: #9399b2;
+
+// Shades of powerline darkness increments, 0 is darkest
+$dark3: #313244;
+$dark2: #1e1e2e;
+$dark1: #181825;
+
+$battery: $dark3;
+$time: $dark2;
+
+$cpuinfo: $dark1;
+$memory: $dark2;
+$cpu: $dark3;
+$distro-fg: #000000;
+$distro-bg: $accent;
+$date: $dark2;
+$tray: $dark1;
+$pulseaudio: $dark1;
+$backlight: $dark2;
+$powermenu: $accent;
+$workspaces: $dark1;
+
 
 window.Bar {
     box-shadow: none;
-    background-color: $bg;
-    color: $fg;
+    background-color: $main-bg;
+    color: $main-fg;
     font-size: 1em;
     font-family: "JetBrains Mono", monospace;
 
     /* Powerline */
     .powerline {
         font-size: 12.5pt;
-        //border-radius: 10px;
     }
 
     .powerline.right {
@@ -24,15 +46,12 @@ window.Bar {
         padding-right: 3px;
     }
     .powerline.left {
-        //text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
-        //padding-left: 3px;
+        text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
     }
 
     .powerline.inverse {
         padding: 0;
         text-shadow: none;
-        //font-size: 13pt;
-        //margin-bottom: -0.1px;
     }
 
     /* All Widgets */
@@ -44,33 +63,31 @@ window.Bar {
         text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
     }
 
-    /* Icon */
-    #Icon .powerline {
-        color: #9ece6a;
+    /* Time */
+    #Clock .widget {
+        background-color: $time;
     }
 
-    #Icon .widget {
-        //margin: 2px 4px 2px 0;
-        padding-right: 6px;
-        padding-left: 9px;
+    #Clock .powerline {
+        color: $time;
     }
 
     /* Battery */
     #Battery .widget {
-        background-color: #9ece6a;
+        background-color: $battery;
     }
 
     #Battery .powerline {
-        color: #9ece6a;
-        background: #7aa2f7;
+        color: $battery;
+        background: $time;
     }
 
-    /* Time */
-    #Clock .widget {
-        background-color: #7aa2f7;
+    /* Icon */
+    #Icon .powerline {
+        color: $battery;
     }
 
-    #Clock .powerline {
-        color: #7aa2f7;
+    #Icon .widget {
+        font-size: 12.5pt;
     }
 }
