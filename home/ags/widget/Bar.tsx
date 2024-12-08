@@ -1,6 +1,7 @@
 import {App, Astal, Gtk, Gdk} from "astal/gtk3"
 import {Variable, GLib, bind} from "astal"
 import Battery from "./modules/Battery"
+import Workspaces from "./modules/Workspaces"
 import {PowerlineLeft, PowerlineLeftInverse} from "./modules/Powerline";
 
 const time = Variable<string>("").poll(1000, () =>
@@ -16,6 +17,7 @@ export default function Bar(monitor: Gdk.Monitor) {
     >
         <centerbox>
             <box hexpand={true} halign={Gtk.Align.START}>
+                <Workspaces/>
             </box>
             <box>
 
