@@ -1,0 +1,13 @@
+[config.wallpaper]
+
+command = "swww"
+arguments = ["img", "--transition-type", "grow", "--transition-pos", "0.25,0.6", "--transition-step", "120", "--resize", "crop", "--transition-fps", "60"]
+set = true
+
+[templates.gtk3]
+input_path = '~/nixos-config/home/matugen/templates/gtk.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+
+[templates.gtk4]
+input_path = '~/nixos-config/home/matugen/templates/gtk.css'
+output_path = '~/.config/gtk-4.0/colors.css'

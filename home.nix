@@ -11,12 +11,13 @@
     firefox
     vscodium
     asciiquarium
-    rofi-wayland
     jetbrains.idea-ultimate
     nodejs
     obsidian
-    pandoc
     nerd-fonts.jetbrains-mono
+    usbutils
+    inputs.swww.packages.${pkgs.system}.swww
+    inputs.matugen.packages.${pkgs.system}.default
   ];
 
   # This value determines the Home Manager release that your

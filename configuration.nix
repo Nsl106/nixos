@@ -74,6 +74,7 @@
     git
     just
     brightnessctl
+    openjdk17
   ];
 
   services.upower.enable = true;

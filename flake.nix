@@ -18,6 +18,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.astal.follows = "astal";
     };
+
+    swww = {
+      url = "github:LGFae/swww";
+    };
+
+    matugen = {
+      url = "github:/InioX/Matugen?ref=8384ba04eff977d7f122f179dc7af6e3c40ebe34";
+    };
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs: {
@@ -36,6 +44,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.nolan = import ./home.nix;
             home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.backupFileExtension = ".backup";
           }
         ];
       };

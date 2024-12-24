@@ -4,7 +4,12 @@
   ];
 
   home.packages = with pkgs; [
-    gobject-introspection
+#    gobject-introspection
+#    inputs.ags.packages.${pkgs.system}.notifd
+#    inputs.ags.packages.${pkgs.system}.mpris
+#    inputs.ags.packages.${pkgs.system}.auth
+    material-symbols
+#    wl-screenrec
   ];
 
   programs.ags = {
@@ -15,6 +20,11 @@
 
     # additional packages to add to gjs's runtime
     extraPackages = with pkgs; [
+#      pkgs.libsoup_3
+#      pkgs.gtksourceview
+#      pkgs.libnotify
+#      pkgs.webkitgtk_4_1
+#      pkgs.gst_all_1.gstreamer
       inputs.ags.packages.${pkgs.system}.apps
       inputs.ags.packages.${pkgs.system}.battery
       inputs.ags.packages.${pkgs.system}.hyprland
