@@ -1,24 +1,8 @@
-{ config, pkgs, inputs, ... }: {
-  imports = [
-    ./home
-  ];
+{ osConfig, pkgs, inputs, ... }: {
+  imports = [ ../modules ];
 
   home.username = "nolan";
   home.homeDirectory = "/home/nolan";
-
-  home.packages = with pkgs; [
-    neofetch
-    firefox
-    vscodium
-    asciiquarium
-    jetbrains.idea-ultimate
-    nodejs
-    obsidian
-    nerd-fonts.jetbrains-mono
-    usbutils
-    inputs.swww.packages.${pkgs.system}.swww
-    inputs.matugen.packages.${pkgs.system}.default
-  ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

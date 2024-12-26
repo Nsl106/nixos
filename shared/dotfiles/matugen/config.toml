@@ -5,9 +5,9 @@ arguments = ["img", "--transition-type", "grow", "--transition-pos", "0.25,0.6",
 set = true
 
 [templates.gtk3]
-input_path = '~/nixos-config/home/matugen/templates/gtk.css'
+input_path = './templates/gtk.css'
 output_path = '~/.config/gtk-3.0/colors.css'
 
 [templates.gtk4]
-input_path = '~/nixos-config/home/matugen/templates/gtk.css'
+input_path = './templates/gtk.css'
 output_path = '~/.config/gtk-4.0/colors.css'
