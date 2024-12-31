@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    hyprland.url = "github:hyprwm/Hyprland";
+
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,7 +42,7 @@
               useUserPackages = true;
               users.nolan = ./shared/home/nolan;
               extraSpecialArgs = { inherit inputs; };
-              backupFileExtension = ".backup";
+              backupFileExtension = "backup";
 	    };
           }
         ];

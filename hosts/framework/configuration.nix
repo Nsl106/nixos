@@ -38,12 +38,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    git
     just
     brightnessctl
     openjdk17
   ];
 
+  services.fwupd.enable = true;
   services.upower.enable = true;
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;

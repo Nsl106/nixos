@@ -7,6 +7,7 @@ deploy:
 hyprland-clean:
   rm -rf ${HOME}/.config/hypr
 
-hyprland-test:
-  rm -rf ${HOME}/.config/hypr
-  rsync -avz --copy-links home/hyprland/ ${HOME}/.config/hypr
+hyprland-deploy:
+  #rm -rf ${HOME}/.config/hypr
+  cp -r shared/dotfiles/hypr/* ${HOME}/.config/hypr
+  hyprctl reload

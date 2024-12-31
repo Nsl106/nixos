@@ -8,7 +8,11 @@
 
   config = lib.mkIf osConfig.sysconf.desktop.enable {
     home.file.".config/hypr/" = {
-      source = ../../../dotfiles/hyprland;
+      source = ../../../dotfiles/hypr;
+      recursive = true;
+    };
+    home.file.".config/kitty/" = {
+      source = ../../../dotfiles/kitty;
       recursive = true;
     };
     home.file.".config/hypr/monitors.conf".text = lib.strings.concatLines(lib.lists.forEach osConfig.sysconf.desktop.hyprlandMonitors (x: "monitor = ${x}"));
